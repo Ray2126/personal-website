@@ -1,9 +1,12 @@
 <template>
   <div>
     Raymond Yang
-    <button @click="$router.push('/about')">
-      To about
-    </button>
+    <v-btn
+      @click="$router.push('/about')"
+      color="primary"
+    >
+      <span>To About</span>
+    </v-btn>
   </div>
 </template>
 

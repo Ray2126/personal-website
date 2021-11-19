@@ -1,9 +1,12 @@
 <template>
   <div>
     About me
-    <button @click="$router.push('/')">
-      To landing
-    </button>
+    <v-btn
+      @click="$router.push('/')"
+      color="primary"
+    >
+      <span>To Landing</span>
+    </v-btn>
   </div>
 </template>
 
