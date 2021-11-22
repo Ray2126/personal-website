@@ -1,20 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Landing from './views/Landing';
-import About from './views/About';
+import Home from './views/Home';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    component: Landing,
+    component: Home,
   },
-  {
-    path: '/about',
-    component: About,
-  }
 ];
 
 const router = new VueRouter({

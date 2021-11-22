@@ -32,13 +32,16 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "arrow-spacing": "error",
+      "indent": [ "error", 2 ]
+    }
   },
   "browserslist": [
     "> 1%",

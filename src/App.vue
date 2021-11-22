@@ -2,44 +2,59 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
+      light
+      flat
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <div
+        class="text-h4 ml-6"
+        style="cursor:pointer;"
+        @click="$router.push('/')"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        Raymond Yang
+      </div>
+      <v-spacer />
+      <v-btn text>
+        <span
+          class="mx-1"
+          @click="$router.push('/')"
+        >
+          Home
+        </span>
+      </v-btn>
+      <v-btn text>
+        <span
+          class="mx-1"
+          @click="$router.push('/projects')"
+        >
+          Projects
+        </span>
+      </v-btn>
+      <v-btn text>
+        <span
+          class="mx-1"
+          @click="$router.push('/contact')"
+        >
+          Contact
+        </span>
+      </v-btn>
+      <v-btn text>
+        <span
+          class="mx-1"
+          @click="$router.push('/blog')"
+        >
+          Blog
+        </span>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <router-view />
+      <v-container fluid>
+        <router-view />
+      </v-container>
     </v-main>
+    <v-footer app>
+      Copyright Raymond Yang 2021
+    </v-footer>
   </v-app>
 </template>
 
