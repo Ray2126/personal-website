@@ -24,14 +24,6 @@
       <v-btn text>
         <span
           class="mx-1"
-          @click="$router.push('/projects')"
-        >
-          Projects
-        </span>
-      </v-btn>
-      <v-btn text>
-        <span
-          class="mx-1"
           @click="$router.push('/contact')"
         >
           Contact
@@ -47,7 +39,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="container-wrapper">
       <v-container fluid>
         <router-view />
       </v-container>
@@ -64,3 +56,13 @@ export default {
   name: 'App',
 };
 </script>
+
+<style scoped>
+
+.container-wrapper {
+  margin: auto;
+  max-width: 60%;
+  margin-top: 64px;
+}
+
+</style>
