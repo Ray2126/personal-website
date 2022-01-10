@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from './views/Home';
 import Contact from './views/Contact';
+import Blog from './views/Blog';
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,10 @@ const routes = [
   {
     path: '/contact',
     component: Contact,
+  },
+  {
+    path: '/blog',
+    component: Blog,
   }
 ];
 

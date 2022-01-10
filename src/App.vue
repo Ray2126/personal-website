@@ -24,17 +24,17 @@
       <v-btn text>
         <span
           class="mx-1"
-          @click="$router.push('/contact')"
+          @click="$router.push('/blog')"
         >
-          Contact
+          Blog
         </span>
       </v-btn>
       <v-btn text>
         <span
           class="mx-1"
-          @click="$router.push('/blog')"
+          @click="$router.push('/contact')"
         >
-          Blog
+          Contact
         </span>
       </v-btn>
     </v-app-bar>
