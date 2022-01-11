@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import Home from './views/Home';
 import Contact from './views/Contact';
 import Blog from './views/Blog';
+import BlogPost from './views/BlogPost';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/blog',
     component: Blog,
+  },
+  {
+    path: '/blog/post/:postNumber',
+    component: BlogPost,
   }
 ];
 
