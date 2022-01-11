@@ -47,28 +47,14 @@
         </v-menu>
       </div>
       <div v-else>
-        <v-btn text>
-          <span
-            class="mx-1"
-            @click="$router.push('/')"
-          >
-            Home
-          </span>
-        </v-btn>
-        <v-btn text>
-          <span
-            class="mx-1"
-            @click="$router.push('/blog')"
-          >
-            Blog
-          </span>
-        </v-btn>
-        <v-btn text>
-          <span
-            class="mx-1"
-            @click="$router.push('/contact')"
-          >
-            Contact
+        <v-btn
+          v-for="(item, index) in navItems"
+          :key="index"
+          text
+          @click="$router.push(item.path)"
+        >
+          <span class="mx-1">
+            {{ item.title }}
           </span>
         </v-btn>
       </div>
