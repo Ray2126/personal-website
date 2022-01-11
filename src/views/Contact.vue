@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row
-      class="text-h4 d-flex justify-center mb-5"
+      class="text-h5 text-sm-h4 text-md-h3 d-flex justify-center mb-5"
       style="text-align:center;"
     >
       Interested to get in touch? <br>
@@ -51,7 +51,7 @@
       </v-col>
     </v-row>
     <v-row
-      class="text-h4 d-flex justify-center mb-5"
+      class="text-h5 text-sm-h4 text-md-h3 d-flex justify-center mb-5"
       style="text-align:center;"
     >
       And here is my CV!

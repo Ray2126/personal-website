@@ -6,40 +6,81 @@
       flat
     >
       <div
-        class="text-h4 ml-6"
-        style="cursor:pointer;"
+        class="text-h5 text-sm-h4"
+        style="
+          cursor:pointer;
+          min-width:30%;
+        "
         @click="$router.push('/')"
       >
         Raymond Yang
       </div>
       <v-spacer />
-      <v-btn text>
-        <span
-          class="mx-1"
-          @click="$router.push('/')"
-        >
-          Home
-        </span>
-      </v-btn>
-      <v-btn text>
-        <span
-          class="mx-1"
-          @click="$router.push('/blog')"
-        >
-          Blog
-        </span>
-      </v-btn>
-      <v-btn text>
-        <span
-          class="mx-1"
-          @click="$router.push('/contact')"
-        >
-          Contact
-        </span>
-      </v-btn>
+      <div
+        v-if="showMobileMenu"
+        class="text-center"
+      >
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              text
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>
+                mdi-menu
+              </v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(item, index) in navItems"
+              :key="index"
+            >
+              <v-list-item-title @click="$router.push(item.path)">
+                <v-btn text>
+                  {{ item.title }}
+                </v-btn>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
+      <div v-else>
+        <v-btn text>
+          <span
+            class="mx-1"
+            @click="$router.push('/')"
+          >
+            Home
+          </span>
+        </v-btn>
+        <v-btn text>
+          <span
+            class="mx-1"
+            @click="$router.push('/blog')"
+          >
+            Blog
+          </span>
+        </v-btn>
+        <v-btn text>
+          <span
+            class="mx-1"
+            @click="$router.push('/contact')"
+          >
+            Contact
+          </span>
+        </v-btn>
+      </div>
     </v-app-bar>
 
-    <v-main class="container-wrapper">
+    <v-main
+      class="mt-12"
+      :style="`
+        margin: auto;
+        max-width: ${containerMaxWidth};
+      `"
+    >
       <v-container fluid>
         <router-view />
       </v-container>
@@ -54,15 +95,46 @@
 
 export default {
   name: 'App',
+
+  data() {
+    return {
+      navItems: [
+        {
+          title: 'About',
+          path: '/',
+        },
+        {
+          title: 'Blog',
+          path: '/blog',
+        },
+        {
+          title: 'Contact',
+          path: '/contact',
+        }
+      ],
+      responsiveStyles: {
+        mobile: {
+          containerMaxWidth: '90%'
+        },
+        desktop: {
+          containerMaxWidth: '60%'
+        }
+      }
+    };
+  },
+
+  computed: {
+    device() {
+      return this.$vuetify.breakpoint.smAndDown ? 'mobile' : 'desktop';
+    },
+
+    containerMaxWidth() {
+      return this.responsiveStyles[this.device].containerMaxWidth;
+    },
+
+    showMobileMenu() {
+      return this.device === 'mobile';
+    }
+  }
 };
 </script>
-
-<style scoped>
-
-.container-wrapper {
-  margin: auto;
-  max-width: 60%;
-  margin-top: 64px;
-}
-
-</style>
