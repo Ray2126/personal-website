@@ -6,14 +6,18 @@
       flat
     >
       <div
-        class="text-h5 text-sm-h4"
+        class="d-flex align-center"
         style="
           cursor:pointer;
           min-width:30%;
         "
         @click="$router.push('/')"
       >
-        Raymond Yang
+        <img
+          src="../public/logo.png"
+          alt="Raymond Yang Logo"
+        >
+        <span class="text-h5 text-sm-h4 ml-4">Raymond Yang</span>
       </div>
       <v-spacer />
       <div
