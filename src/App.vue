@@ -64,7 +64,7 @@
       class="mt-12"
       :style="`
         margin: auto;
-        max-width: ${containerMaxWidth};
+        width: ${containerWidth};
       `"
     >
       <v-container fluid>
@@ -100,10 +100,10 @@ export default {
       ],
       responsiveStyles: {
         mobile: {
-          containerMaxWidth: '90%'
+          containerWidth: '90%'
         },
         desktop: {
-          containerMaxWidth: '60%'
+          containerWidth: '60%'
         }
       }
     };
@@ -114,8 +114,8 @@ export default {
       return this.$vuetify.breakpoint.smAndDown ? 'mobile' : 'desktop';
     },
 
-    containerMaxWidth() {
-      return this.responsiveStyles[this.device].containerMaxWidth;
+    containerWidth() {
+      return this.responsiveStyles[this.device].containerWidth;
     },
 
     showMobileMenu() {

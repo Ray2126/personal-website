@@ -58,10 +58,10 @@
     </v-row>
     <v-row class="d-flex justify-center mb-15">
       <v-btn 
-        class="ma-2" 
-        outlined 
+        class="ma-2"
         href="Raymond_Yang_CV.pdf"
         target="blank"
+        color="primary"
       >
         View
       </v-btn>
