@@ -21,7 +21,7 @@
         class="text-center"
       >
         <v-menu offset-y>
-          <template v-slot:activator="{ on, attrs }">
+          <template #activator="{ on, attrs }">
             <v-btn
               text
               v-bind="attrs"
@@ -71,8 +71,11 @@
         <router-view />
       </v-container>
     </v-main>
-    <v-footer app>
-      Copyright Raymond Yang 2021
+    <v-footer
+      app
+      class="d-flex justify-center"
+    >
+      Copyright &copy; Raymond Yang 2021
     </v-footer>
   </v-app>
 </template>
