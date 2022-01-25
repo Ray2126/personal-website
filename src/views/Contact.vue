@@ -8,7 +8,7 @@
       Here are ways you can contact me!
     </v-row>
     <v-row class="d-flex justify-center mb-15">
-      <v-col class="d-flex justify-center">
+      <div class="mx-4">
         <a
           id="send-email-button"
           href="mailto:raymondyang@outlook.co.nz"
@@ -21,8 +21,8 @@
             mdi-email
           </v-icon>
         </a>
-      </v-col>
-      <v-col class="d-flex justify-center">
+      </div>
+      <div class="mx-4">
         <a
           id="linked-in-button"
           href="https://www.linkedin.com/in/raymond-yang-96365419a/"
@@ -35,8 +35,8 @@
             mdi-linkedin
           </v-icon>
         </a>
-      </v-col>
-      <v-col class="d-flex justify-center">
+      </div>
+      <div class="mx-4">
         <a
           id="github-button"
           href="https://github.com/Ray2126"
@@ -48,7 +48,7 @@
             mdi-github
           </v-icon>
         </a>
-      </v-col>
+      </div>
     </v-row>
     <v-row
       class="text-h5 text-sm-h4 text-md-h3 d-flex justify-center mb-5"

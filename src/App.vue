@@ -79,7 +79,7 @@
       app
       class="d-flex justify-center"
     >
-      Copyright &copy; Raymond Yang 2021
+      Copyright &copy; Raymond Yang 2022
     </v-footer>
   </v-app>
 </template>
